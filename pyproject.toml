@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "wikipedia-stats"
+version = "0.1.0"
+description = "Get statistics through wikipedia APIs"
+authors = ["Florck <florck@gmail.com>"]
+readme = "README.md"
+packages = [{include = "wikipedia_stats"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+requests = "^2.31.0"
+jupyter = "^1.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pylint = "*"
+nbqa = "*"
+
+[tool.pylint.message-control]
+disable = [
+    "W1203",
+    "R0903",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
